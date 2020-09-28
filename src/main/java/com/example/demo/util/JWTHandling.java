@@ -43,7 +43,7 @@ public class JWTHandling {
 		JwtBuilder builder = Jwts.builder().setId(UUID.randomUUID().toString())
 											.setIssuedAt(Date.from(now.atZone(ZoneId.systemDefault()).toInstant()))
 											.setSubject("Authorization")
-											.setIssuer("Accenture")
+											.setIssuer("TheodoreTs")
 											.signWith(signatureAlgorithm, signingKey);
 		builder.setExpiration(Date.from(expiry.atZone(ZoneId.systemDefault()).toInstant()));
 		claims.put("id", id.toString());
